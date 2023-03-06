@@ -68,7 +68,8 @@ class Translator(threading.Thread):
 		self._stopEvent.set()
 
 	def run(self):
-		urlTemplate = 'https://translate.amz.wang/translate_a/single?client=gtx&sl={lang_from}&tl={lang_to}&dt=t&q={text}&dj=1'
+#		urlTemplate = 'https://translate.google.com/translate_a/single?client=gtx&sl={lang_from}&tl={lang_to}&dt=t&q={text}&dj=1'
+		urlTemplate = 'https://translate.googleapis.mirror.viyf.org/translate_a/single?client=gtx&sl={lang_from}&tl={lang_to}&dt=t&q={text}&dj=1'
 		for chunk in splitChunks(self.text, self.chunksize):
 			# Make sure we don't send requests to google too often.
 			# Try to simulate a human.
