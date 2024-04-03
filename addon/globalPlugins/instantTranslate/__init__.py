@@ -105,6 +105,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		super().__init__(*args, **kwargs)
 		if globalVars.appArgs.secure:
 			return
+		for addon in addonHandler.getAvailableAddons(): 
+			if addon.name == "instantTranslate" and not addon.isDisabled:
+				raise RuntimeError("instantTranslateCN cannot be used while instantTranslate is running. Please, disable instantTranslate and restart NVDA.")
 		config.conf.spec[addonName] = confspec
 		self.addonConf = config.conf[addonName]
 		self.toggling = False

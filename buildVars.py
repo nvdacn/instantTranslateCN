@@ -9,7 +9,7 @@ addon_info = {
 	# for previously unpublished addons, please follow the community guidelines at:
 	# https://bitbucket.org/nvdaaddonteam/todo/raw/master/guideLines.txt
 	# add-on Name, internal for nvda
-	"addon_name" : "instantTranslate",
+	"addon_name" : "instantTranslateCN",
 	# Add-on summary, usually the user visible name of the addon.
 	# Translators: Summary for this add-on to be shown on installation and add-on information.
 	"addon_summary" : _("Instant Translate"),
@@ -27,7 +27,7 @@ addon_info = {
 	# Minimum NVDA version supported
 	"addon_minimumNVDAVersion" : "2019.3",
 	# Last NVDA version supported/tested
-	"addon_lastTestedNVDAVersion" : "2023.2.0"
+	"addon_lastTestedNVDAVersion" : "2024.1.0"
 }
 
 import os.path
